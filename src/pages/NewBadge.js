@@ -2,7 +2,6 @@ import React from "react";
 
 // Importamos los componentes
 import Badge from "../components/Badge";
-import Navbar from "../components/Navbar";
 import BadgeForm from "../components/BadgeForm.js";
 
 import "./styles/BadgeNew.css";
@@ -34,8 +33,8 @@ class NewBadge extends React.Component {
 
   render() {
     return (
-      <div>
-        <Navbar />
+      <React.Fragment>
+
         <div className="BadgeNew__hero">
           <img className="img-fluid" src={header} alt="Logo" />
         </div>
@@ -49,7 +48,7 @@ class NewBadge extends React.Component {
                 twitter={this.state.form.twitter}
                 jobTitle={this.state.form.jobTitle}
                 email={this.state.form.email}
-                avatarUrl=""
+                avatarUrl="https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon"
               />
             </div>
 
@@ -61,7 +60,7 @@ class NewBadge extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
